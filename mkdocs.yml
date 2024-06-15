@@ -1,0 +1,84 @@
+site_name: Method Security
+site_url: https://method-security.github.io/
+site_description: AI accessible cybersecurity tools
+docs_dir: docs/
+
+nav:
+  - Getting Started:
+      - Overview: index.md
+  - Tools:
+      - Available Tools: docs/tools.md
+      - Output Formats: docs/output.md
+  - Contributing:
+      - How to contribute:
+          - Discussions: community/contribute/discussions.md
+          - Issues: community/contribute/issues.md
+          - Pull Requests: community/contribute/pr.md
+theme:
+  name: material
+  language: "en"
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+    - content.action.edit
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - footnotes
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/method_security
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/method-security
+    - icon: fontawesome/brands/github
+      link: https://github.com/Method-Security
+
+plugins:
+  - search
+  - offline
